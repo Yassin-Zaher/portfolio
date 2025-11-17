@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zaher Yassin</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Georgia", "Times New Roman", serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      header {
+        background-color: #fff;
+        padding: 40px 0;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .headshot {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #f0f0f0;
+      }
+
+      .header-info h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #2c3e50;
+      }
+
+      .project-image {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .project-image img {
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        border-radius: 8px;
+      }
+
+      .header-info .title {
+        font-size: 1.2em;
+        color: #34495e;
+        margin-bottom: 5px;
+      }
+
+      .header-info .affiliation {
+        font-size: 1.1em;
+        color: #7f8c8d;
+      }
+
+      /* Navigation */
+      nav {
+        background-color: #34495e;
+        padding: 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav li {
+        margin: 0;
+      }
+
+      nav a {
+        display: block;
+        padding: 15px 25px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+      }
+
+      nav a:hover {
+        background-color: #2c3e50;
+      }
+
+      /* Main content */
+      main {
+        padding: 40px 0;
+      }
+
+      section {
+        margin-bottom: 60px;
+      }
+
+      section h2 {
+        font-size: 2em;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #3498db;
+      }
+
+      /* About section */
+      .about-content p {
+        margin-bottom: 20px;
+        font-size: 1.1em;
+        text-align: justify;
+      }
+
+      .research-interests {
+        margin-top: 30px;
+      }
+
+      .research-interests h3 {
+        color: #34495e;
+        margin-bottom: 15px;
+      }
+
+      .research-interests ul {
+        list-style-type: disc;
+        margin-left: 30px;
+      }
+
+      .research-interests li {
+        margin-bottom: 8px;
+      }
+
+      /* Research section */
+      .research-project {
+        margin-bottom: 40px;
+        padding: 30px;
+        background-color: #f8f9fa;
+        border-left: 4px solid #3498db;
+      }
+
+      .research-project h3 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+      }
+
+      .research-project p {
+        margin-bottom: 15px;
+        text-align: justify;
+      }
+
+      /* Project details sections */
+      .project-details {
+        margin-top: 20px;
+      }
+
+      .project-details h4 {
+        color: #34495e;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        font-size: 1.1em;
+      }
+
+      .project-details ul {
+        list-style-type: disc;
+        margin-left: 30px;
+        margin-bottom: 15px;
+      }
+
+      .project-details li {
+        margin-bottom: 5px;
+      }
+
+      .tech-stack {
+        margin-top: 15px;
+        font-style: italic;
+        color: #555;
+      }
+
+      .project-links {
+        margin-top: 15px;
+      }
+
+      .project-links a {
+        color: #3498db;
+        text-decoration: none;
+        margin-right: 15px;
+        font-weight: 500;
+      }
+
+      .project-links a:hover {
+        text-decoration: underline;
+      }
+
+      /* Publications */
+      .publication {
+        margin-bottom: 25px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+      }
+
+      .publication h3 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+      }
+
+      .publication .authors {
+        font-style: italic;
+        margin-bottom: 5px;
+      }
+
+      .publication .venue {
+        color: #34495e;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      .publication .links a {
+        color: #3498db;
+        text-decoration: none;
+        margin-right: 15px;
+        font-weight: 500;
+      }
+
+      .publication .links a:hover {
+        text-decoration: underline;
+      }
+
+      /* Teaching */
+      .course {
+        margin-bottom: 30px;
+        padding: 25px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+      }
+
+      .course h3 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      .course .course-info {
+        color: #34495e;
+        margin-bottom: 10px;
+      }
+
+      .course a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .course a:hover {
+        text-decoration: underline;
+      }
+
+      /* Contact */
+      .contact-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .contact-section h3 {
+        color: #34495e;
+        margin-bottom: 15px;
+      }
+
+      .contact-section p {
+        margin-bottom: 10px;
+      }
+
+      .social-links a {
+        display: inline-block;
+        margin-right: 20px;
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .social-links a:hover {
+        text-decoration: underline;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #34495e;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 60px;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+          text-align: center;
+          gap: 20px;
+        }
+
+        .headshot {
+          width: 120px;
+          height: 120px;
+        }
+
+        .header-info h1 {
+          font-size: 2em;
+        }
+
+        nav ul {
+          flex-wrap: wrap;
+        }
+
+        nav a {
+          padding: 12px 15px;
+          font-size: 0.9em;
+        }
+
+        .contact-info {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        section h2 {
+          font-size: 1.7em;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 15px;
+        }
+
+        nav a {
+          padding: 10px 12px;
+          font-size: 0.8em;
+        }
+
+        .header-info h1 {
+          font-size: 1.8em;
+        }
+
+        section {
+          margin-bottom: 40px;
+        }
+      }
+
+      .custom-video {
+        width: 100%;
+        max-width: 720px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <img src="images/me2.jpg" alt="Zaher" class="headshot" />
+          <div class="header-info">
+            <h1>Zaher Yassin</h1>
+            <div class="title">Master's Student in Artificial Intelligence</div>
+            <div class="affiliation">
+              Department of Computer Science • Ibn Tofail University
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <div class="container">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <!-- About Section -->
+        <section id="about">
+          <h2>About</h2>
+          <div class="about-content">
+            <p>
+              Master’s student focused on research and study. Work explores
+              data, problem-solving, and creating practical solutions across
+              different areas. <br />
+
+              My work focuses on generative models—especially diffusion models—for data-efficient computer vision. I’m interested in synthetic data generation, few-shot learning, and segmentation of rare cases. I also explore the mathematical intuition and optimization behind deep generative models, and I enjoy building practical ML pipelines. Recently, I’ve expanded my interests to NLP, large language models, and transformer-based architectures.
+            </p>
+
+           <div class="research-interests">
+            <h3>Research Interests</h3>
+            <ul>
+              <li>Generative models (Diffusion & Latent Diffusion Models)</li>
+              <li>Data-efficient learning & synthetic data generation</li>
+              <li>Computer vision (detection, segmentation, representation learning)</li>
+              <li>Medical image segmentation & rare-case augmentation</li>
+              <li>NLP, Large Language Models & Transformers</li>
+              <li>Optimization & mathematical foundations of deep learning</li>
+            </ul>
+          </div>
+
+
+          </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research">
+          <h2>Research Projects</h2>
+
+         <div class="research-project">
+  <div class="project-image">
+    <img src="images/ddpmps-img.png" alt="Diffusion Model Image Generation" />
+  </div>
+  <h3>Image Generation with Denoising Diffusion Models</h3>
+  <p>
+    A lightweight and optimized implementation of Denoising Diffusion Probabilistic Models (DDPM) designed to democratize the use of synthetic data. This system employs a UNet neural network architecture to learn complex data distributions (such as the Oxford Flowers dataset) and generate high-fidelity, realistic images. The project integrates class-based conditioning for controlled generation and utilizes advanced sampling methods to ensure both diversity and quality in the output.
+  </p>
+
+  <div class="project-details">
+    <h4>System Architecture</h4>
+    <ul>
+      <li>
+        UNet architecture featuring attention blocks and sinusoidal time embeddings
+      </li>
+      <li>
+        Gaussian diffusion process utilizing a cosine noise schedule for improved sample quality
+      </li>
+      <li>
+        Scalable design supporting multi-GPU distributed training and accelerated sampling via DDIM
+      </li>
+      <li>
+        Conditional generation pipeline allowing for specific class synthesis
+      </li>
+    </ul>
+
+    <h4>Machine Learning Components</h4>
+    <ul>
+      <li>
+        Optimization using AdamW with Exponential Moving Average (EMA) of model weights
+      </li>
+      <li>
+        Training objective based on Mean Squared Error (MSE) loss between predicted and actual noise
+      </li>
+      <li>
+        Deep feature extraction using residual blocks (ResBlocks) with Group Normalization
+      </li>
+    </ul>
+
+    <p class="tech-stack">
+      <strong>Technologies:</strong> Python, PyTorch, NumPy, OpenCV, SciPy, Torchvision
+    </p>
+
+    <div class="project-links">
+      <a 
+        href="https://github.com/vsehwag/minimal-diffusion" 
+        target="_blank"
+        style="text-decoration: none;"
+      >
+        GitHub Repository
+      </a>
+      <a href="files/Diffusion_Report.pdf" target="_blank">
+        Technical Report
+      </a>
+    </div>
+  </div>
+</div>
+
+          <div class="research-project">
+            <div class="project-image">
+              <img src="images/agr.png" alt="Smart Agriculture Project" />
+            </div>
+            <h3>Smart System for Precision Agriculture</h3>
+            <p>
+              Intelligent system for real-time monitoring and optimization of
+              agricultural conditions. An IoT network of connected sensors
+              tracks parameters such as soil moisture and temperature, sending
+              data to a centralized platform for analysis. Predictive models
+              optimize irrigation schedules and anticipate crop needs, improving
+              efficiency and sustainability. The system integrates hardware and
+              software components, including Python, Arduino, DHT11 and YL-69
+              sensors, scikit-learn for predictive modeling, and Flask for data
+              visualization.
+            </p>
+
+            <div class="project-details">
+              <h4>System Architecture</h4>
+              <ul>
+                <li>
+                  Arduino-based sensor network with wireless communication
+                </li>
+                <li>Real-time data collection every 15 minutes</li>
+                <li>Machine learning pipeline for irrigation prediction</li>
+                <li>Web dashboard for monitoring and control</li>
+              </ul>
+
+              <h4>Machine Learning Components</h4>
+              <ul>
+                <li>Random Forest regression for soil moisture prediction</li>
+                <li>Time series analysis for weather pattern recognition</li>
+                <li>Decision tree for irrigation scheduling optimization</li>
+              </ul>
+
+              <p class="tech-stack">
+                <strong>Technologies:</strong> Python, Arduino, DHT11, YL-69
+                sensors, scikit-learn, Flask, SQLite
+              </p>
+
+              <div class="project-links">
+                <span
+                  style="
+                    color: gray;
+                    cursor: not-allowed;
+                    text-decoration: none;
+                  "
+                >
+                  GitHub Repository
+                </span>
+                <a href="files/Rapport_IOT_V1.pdf" target="_blank"
+                  >Technical Report</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="research-project">
+            <div class="project-image">
+              <img src="images/ano.png" alt="Anomaly Detection Project" />
+            </div>
+            <h3>Anomaly Detection in Industrial Images</h3>
+            <p>
+              Anomaly detection in industrial images using computer vision
+              techniques. Convolutional autoencoders learn normal feature
+              patterns in an unsupervised manner, allowing the system to
+              identify defects automatically. The method supports efficient
+              quality control and defect detection in manufacturing processes,
+              combining deep learning with practical industrial applications.
+            </p>
+
+            <div class="project-details">
+              <h4>Model Architecture</h4>
+              <ul>
+                <li>
+                  Convolutional autoencoder with encoder-decoder structure
+                </li>
+                <li>Skip connections for preserving fine-grained details</li>
+                <li>
+                  Reconstruction loss threshold for anomaly classification
+                </li>
+              </ul>
+
+              <h4>Performance Metrics</h4>
+              <ul>
+                <li>90.2% accuracy on industrial defect detection dataset</li>
+                <li>Low false positive rate (2.1%) suitable for production</li>
+              </ul>
+
+              <p class="tech-stack">
+                <strong>Technologies:</strong> Python, PyTorch, OpenCV, NumPy,
+                Matplotlib
+              </p>
+
+              <div class="project-links">
+                <span
+                  style="
+                    color: gray;
+                    cursor: not-allowed;
+                    text-decoration: none;
+                  "
+                >
+                  GitHub Repository
+                </span>
+
+                <a href="files/PPD_RAPPORT.pdf" target="_blank"
+                  >Technical Report</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="research-project">
+            <div class="project-media">
+              <video
+                class="custom-video"
+                controls
+                poster="images/handwritten-derivative-thumb.png"
+              >
+                <source
+                  src="images/handwritten-derivative-demo.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <h3>Handwritten Math Recognition &amp; Derivative Solver</h3>
+
+            <p>
+              An interactive web tool that lets users write mathematical
+              functions by hand. The handwriting is recognized using Google’s
+              Handwriting Recognition package, then the interpreted function is
+              sent to Gemini for symbolic solving. Results are returned as
+              step-by-step explanations and rendered in LaTeX for clean
+              presentation. The project combines computer vision, handwriting
+              recognition, and large language models to create an intuitive
+              math-solving experience.
+            </p>
+
+            <div class="project-details">
+              <h4>Technical Implementation</h4>
+              <ul>
+                <li>
+                  Handwriting capture using an OpenCV-based canvas with stroke
+                  smoothing
+                </li>
+                <li>
+                  Google Handwriting Recognition package for converting strokes
+                  to text
+                </li>
+                <li>
+                  Function parsing and symbolic solving through the Gemini LLM
+                  API
+                </li>
+                <li>
+                  Streamlit front-end for real-time interaction and LaTeX
+                  rendering
+                </li>
+              </ul>
+
+              <h4>Key Results</h4>
+              <ul>
+                <li>
+                  Robust recognition and correct symbolic derivatives for
+                  polynomials and common functions
+                </li>
+                <li>
+                  Step-by-step LaTeX-formatted solutions suitable for teaching
+                  and demos
+                </li>
+                <li>
+                  Seamless integration into a Streamlit web app for quick
+                  deployment
+                </li>
+              </ul>
+
+              <p class="tech-stack">
+                <strong>Technologies:</strong> Python, OpenCV, Streamlit, Google
+                Handwriting Recognition, Gemini
+              </p>
+
+              <div class="project-links">
+                <a href="#" target="_blank">GitHub Repository</a>
+                <a href="#" target="_blank">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications">
+          <h2>Publications</h2>
+          <p style="font-style: italic; color: #666; margin-bottom: 30px">
+            Publications will be updated as research projects progress toward
+            completion and submission.
+          </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+          <h2>Contact</h2>
+          <div class="contact-info">
+            <div class="contact-section">
+              <h3>Email</h3>
+              <p>yassin.zaher@uit.ac.ma</p>
+
+              <h3>Address</h3>
+              <p>
+                Department of Computer Science<br />
+                Ibn Tofail University<br />
+                Kenitra, Morocco
+              </p>
+            </div>
+            <div class="contact-section">
+              <h3>Links</h3>
+              <div class="social-links">
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">GitHub</a>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Zaher Yassin. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
