@@ -418,86 +418,172 @@
               data, problem-solving, and creating practical solutions across
               different areas. <br />
 
-              My work focuses on generative models—especially diffusion models—for data-efficient computer vision. I’m interested in synthetic data generation, few-shot learning, and segmentation of rare cases. I also explore the mathematical intuition and optimization behind deep generative models, and I enjoy building practical ML pipelines. Recently, I’ve expanded my interests to NLP, large language models, and transformer-based architectures.
+              My work focuses on generative models—especially diffusion
+              models—for data-efficient computer vision. I’m interested in
+              synthetic data generation, few-shot learning, and segmentation of
+              rare cases. I also explore the mathematical intuition and
+              optimization behind deep generative models, and I enjoy building
+              practical ML pipelines. Recently, I’ve expanded my interests to
+              NLP, large language models, and transformer-based architectures.
             </p>
 
-           <div class="research-interests">
-            <h3>Research Interests</h3>
-            <ul>
-              <li>Generative models (Diffusion & Latent Diffusion Models)</li>
-              <li>Data-efficient learning & synthetic data generation</li>
-              <li>Computer vision (detection, segmentation, representation learning)</li>
-              <li>Medical image segmentation & rare-case augmentation</li>
-              <li>NLP, Large Language Models & Transformers</li>
-              <li>Optimization & mathematical foundations of deep learning</li>
-            </ul>
-          </div>
-
-
+            <div class="research-interests">
+              <h3>Research Interests</h3>
+              <ul>
+                <li>Generative models (Diffusion & Latent Diffusion Models)</li>
+                <li>Data-efficient learning & synthetic data generation</li>
+                <li>
+                  Computer vision (detection, segmentation, representation
+                  learning)
+                </li>
+                <li>Medical image segmentation & rare-case augmentation</li>
+                <li>NLP, Large Language Models & Transformers</li>
+                <li>
+                  Optimization & mathematical foundations of deep learning
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
         <!-- Research Section -->
         <section id="research">
-          <h2>Research Projects</h2>
+          <h2>Featured Research Projects</h2>
+           <div class="research-project">
+            <div class="project-image">
+              <img src="images/ano.png" alt="Anomaly Detection Project" />
+            </div>
+            <h3>Anomaly Detection in Industrial Images</h3>
+            <p>
+              Anomaly detection in industrial images using computer vision
+              techniques. Convolutional autoencoders learn normal feature
+              patterns in an unsupervised manner, allowing the system to
+              identify defects automatically. The method supports efficient
+              quality control and defect detection in manufacturing processes,
+              combining deep learning with practical industrial applications.
+            </p>
 
-         <div class="research-project">
-  <div class="project-image">
-    <img src="images/ddpmps-img.png" alt="Diffusion Model Image Generation" />
-  </div>
-  <h3>Image Generation with Denoising Diffusion Models</h3>
-  <p>
-    A lightweight and optimized implementation of Denoising Diffusion Probabilistic Models (DDPM) designed to democratize the use of synthetic data. This system employs a UNet neural network architecture to learn complex data distributions (such as the Oxford Flowers dataset) and generate high-fidelity, realistic images. The project integrates class-based conditioning for controlled generation and utilizes advanced sampling methods to ensure both diversity and quality in the output.
-  </p>
+            <div class="project-details">
+              <h4>Model Architecture</h4>
+              <ul>
+                <li>
+                  Convolutional autoencoder with encoder-decoder structure
+                </li>
+                <li>Skip connections for preserving fine-grained details</li>
+                <li>
+                  Reconstruction loss threshold for anomaly classification
+                </li>
+              </ul>
 
-  <div class="project-details">
-    <h4>System Architecture</h4>
-    <ul>
-      <li>
-        UNet architecture featuring attention blocks and sinusoidal time embeddings
-      </li>
-      <li>
-        Gaussian diffusion process utilizing a cosine noise schedule for improved sample quality
-      </li>
-      <li>
-        Scalable design supporting multi-GPU distributed training and accelerated sampling via DDIM
-      </li>
-      <li>
-        Conditional generation pipeline allowing for specific class synthesis
-      </li>
-    </ul>
+          
 
-    <h4>Machine Learning Components</h4>
-    <ul>
-      <li>
-        Optimization using AdamW with Exponential Moving Average (EMA) of model weights
-      </li>
-      <li>
-        Training objective based on Mean Squared Error (MSE) loss between predicted and actual noise
-      </li>
-      <li>
-        Deep feature extraction using residual blocks (ResBlocks) with Group Normalization
-      </li>
-    </ul>
+              <p class="tech-stack">
+                <strong>Technologies:</strong> Python, PyTorch, OpenCV, NumPy,
+                Matplotlib
+              </p>
 
-    <p class="tech-stack">
-      <strong>Technologies:</strong> Python, PyTorch, NumPy, OpenCV, SciPy, Torchvision
-    </p>
+              <div class="project-links">
+                <span
+                  style="
+                    color: gray;
+                    cursor: not-allowed;
+                    text-decoration: none;
+                  "
+                >
+                  GitHub Repository
+                </span>
 
-    <div class="project-links">
-      <a 
-        href="https://github.com/vsehwag/minimal-diffusion" 
-        target="_blank"
-        style="text-decoration: none;"
-      >
-        GitHub Repository
-      </a>
-      <a href="files/Diffusion_Report.pdf" target="_blank">
-        Technical Report
-      </a>
-    </div>
-  </div>
-</div>
+                <a href="files/PPD_RAPPORT.pdf" target="_blank"
+                  >Technical Report</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="research-project">
+            <div class="project-image">
+              <img
+                src="images/ddpmps-img.png"
+                alt="Diffusion Model Image Generation"
+              />
+            </div>
+            <h3>Image Generation with Denoising Diffusion Models</h3>
+            <p>
+              A lightweight and optimized implementation of Denoising Diffusion
+              Probabilistic Models (DDPM) designed to democratize the use of
+              synthetic data. This system employs a UNet neural network
+              architecture to learn complex data distributions (such as the
+              Oxford Flowers dataset) and generate high-fidelity, realistic
+              images. The project integrates class-based conditioning for
+              controlled generation and utilizes advanced sampling methods to
+              ensure both diversity and quality in the output.
+            </p>
+
+            <div class="project-details">
+              <h4>System Architecture</h4>
+              <ul>
+                <li>
+                  UNet architecture featuring attention blocks and sinusoidal
+                  time embeddings
+                </li>
+                <li>
+                  Gaussian diffusion process utilizing a cosine noise schedule
+                  for improved sample quality
+                </li>
+                <li>
+                  Scalable design supporting multi-GPU distributed training and
+                  accelerated sampling via DDIM
+                </li>
+                <li>
+                  Conditional generation pipeline allowing for specific class
+                  synthesis
+                </li>
+              </ul>
+
+              <h4>Machine Learning Components</h4>
+              <ul>
+                <li>
+                  Optimization using AdamW with Exponential Moving Average (EMA)
+                  of model weights
+                </li>
+                <li>
+                  Training objective based on Mean Squared Error (MSE) loss
+                  between predicted and actual noise
+                </li>
+                <li>
+                  Deep feature extraction using residual blocks (ResBlocks) with
+                  Group Normalization
+                </li>
+              </ul>
+
+              <p class="tech-stack">
+                <strong>Technologies:</strong> Python, PyTorch, NumPy, OpenCV,
+                SciPy, Torchvision
+              </p>
+
+              <div class="project-links">
+                <span
+                  style="
+                    color: gray;
+                    cursor: not-allowed;
+                    text-decoration: none;
+                  "
+                >
+                  GitHub Repository
+                </a>
+                <a >
+                  <span
+                  style="
+                    color: gray;
+                    cursor: not-allowed;
+                    text-decoration: none;
+                  "
+                >
+                  Technical Report
+                </a>
+              </div>
+            </div>
+          </div>
 
           <div class="research-project">
             <div class="project-image">
@@ -556,60 +642,59 @@
             </div>
           </div>
 
-          <div class="research-project">
-            <div class="project-image">
-              <img src="images/ano.png" alt="Anomaly Detection Project" />
+         
+        </section>
+
+        <!-- Software Projects Section -->
+        <section id="software-projects">
+          <h2>Featured Software Projects</h2>
+
+            <div class="software-project" style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 40px;">
+  <!-- Project Image -->
+  <div class="project-image" style="flex: 1 1 300px; max-width: 300px;">
+    <img src="images/pod1.png" 
+         alt="Collaborative Custom Print Platform" 
+         style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+
+         <img src="images/pod2.png" 
+         alt="Collaborative Custom Print Platform" 
+         style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+
+         <img src="images/pod3.png" 
+         alt="Collaborative Custom Print Platform" 
+         style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+
+  <!-- Project Content -->
+  <div class="project-content" style="flex: 2 1 500px;">
+    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 10px;">
+      Collaborative Platform for Custom Printing on Clothes & Accessories
+    </h3>
+    <p style="margin-bottom: 15px;">
+      Developed a web platform enabling real-time collaboration between clients and designers for creating personalized prints on clothing and accessories. Users can co-design, preview, and finalize products together while the system manages e-commerce functionalities seamlessly.
+    </p>
+
+    <h4 style="font-weight: 500; margin-bottom: 8px;">Key Features</h4>
+    <ul style="margin-bottom: 15px; padding-left: 20px;">
+      <li>Real-time collaboration between clients and designers on product designs</li>
+      <li>Integration of Stable Diffusion to generate custom images and artwork</li>
+      <li>User registration, authentication, and profile management</li>
+      <li>Live previews of custom designs on clothing and accessories</li>
+      <li>Shopping cart, payment integration, and order tracking</li>
+      <li>Fast performance using Redis caching for real-time updates</li>
+    </ul>
+
+    <h4 style="font-weight: 500; margin-bottom: 8px;">Tech Stack</h4>
+    <ul style="margin-bottom: 15px; padding-left: 20px;">
+      <li>Next.js & React.js for front-end and server-side rendering</li>
+      <li>Prisma & MySQL for database management</li>
+      <li>Redis for real-time updates and session management</li>
+      <li>Docker for containerized deployment</li>
+    </ul>
+
+  
+  </div>
             </div>
-            <h3>Anomaly Detection in Industrial Images</h3>
-            <p>
-              Anomaly detection in industrial images using computer vision
-              techniques. Convolutional autoencoders learn normal feature
-              patterns in an unsupervised manner, allowing the system to
-              identify defects automatically. The method supports efficient
-              quality control and defect detection in manufacturing processes,
-              combining deep learning with practical industrial applications.
-            </p>
-
-            <div class="project-details">
-              <h4>Model Architecture</h4>
-              <ul>
-                <li>
-                  Convolutional autoencoder with encoder-decoder structure
-                </li>
-                <li>Skip connections for preserving fine-grained details</li>
-                <li>
-                  Reconstruction loss threshold for anomaly classification
-                </li>
-              </ul>
-
-              <h4>Performance Metrics</h4>
-              <ul>
-                <li>90.2% accuracy on industrial defect detection dataset</li>
-                <li>Low false positive rate (2.1%) suitable for production</li>
-              </ul>
-
-              <p class="tech-stack">
-                <strong>Technologies:</strong> Python, PyTorch, OpenCV, NumPy,
-                Matplotlib
-              </p>
-
-              <div class="project-links">
-                <span
-                  style="
-                    color: gray;
-                    cursor: not-allowed;
-                    text-decoration: none;
-                  "
-                >
-                  GitHub Repository
-                </span>
-
-                <a href="files/PPD_RAPPORT.pdf" target="_blank"
-                  >Technical Report</a
-                >
-              </div>
-            </div>
-          </div>
 
           <div class="research-project">
             <div class="project-media">
@@ -681,12 +766,14 @@
                 Handwriting Recognition, Gemini
               </p>
 
-              <div class="project-links">
-                <a href="#" target="_blank">GitHub Repository</a>
-                <a href="#" target="_blank">Live Demo</a>
-              </div>
+             
             </div>
           </div>
+
+       
+
+
+          
         </section>
 
         <!-- Publications Section -->
@@ -718,7 +805,6 @@
               <div class="social-links">
                 <a href="#" target="_blank">LinkedIn</a>
                 <a href="#" target="_blank">GitHub</a>
-
               </div>
             </div>
           </div>
